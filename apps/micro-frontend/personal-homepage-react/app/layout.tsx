@@ -32,3 +32,8 @@ export default function RootLayout({
     </html>
   );
 }
+
+// 核心：导出qiankun生命周期钩子
+export async function bootstrap() { console.log('NextJS子应用初始化完成') }
+export async function mount(props: any) { console.log('NextJS子应用挂载成功', props) }
+export async function unmount() { console.log('NextJS子应用卸载成功') }
