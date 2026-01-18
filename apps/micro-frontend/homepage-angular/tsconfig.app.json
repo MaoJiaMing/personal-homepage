@@ -4,8 +4,11 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/app",
-    "types": [],
-    "strict": false,
+    "types": [
+      "node",
+      "vite/client" // ✅ 新增：引入Vite官方类型，根治 import.meta.env 类型报错
+    ],
+    "strict": false
   },
   "include": [
     "src/**/*.ts"

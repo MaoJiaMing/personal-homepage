@@ -7,7 +7,7 @@ import { routes } from './app/app.routes';
 
 // 生产环境兼容写法，永不报错
 try {
-  if (process.env.NODE_ENV === 'production') {
+  if (process.env['NODE_ENV'] === 'production') {
     enableProdMode();
   }
 } catch (e) {}
